@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 body {
+    font-family: 'Open Sans';
     margin: 0;
 }
 
@@ -7,8 +10,14 @@ header {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: 12px auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .flex-row {
@@ -17,44 +26,283 @@ header {
     align-items: center;
 }
 
+.flex-column {
+    flex-direction: column;
+}
+
+/* HEADER */
+
 .header-logo img {
     height: 32px;
 }
 
-.navigation-item ul {
+.header-nav-item ul {
     list-style-type: none;
     margin: 0;
     display: flex;
 }
 
-.navigation-item button {
+.header-nav-item button {
     height: 32px;
     padding: 0 20px;
+    font-size: 14px;
     background-color: white;
     font-weight: 400;
     cursor: pointer;
 }
 
-.navigation-item button:hover {
+.header-nav-item button:hover {
     background-color: #ddd;
     color: #333;
 }
 
 .button-left-rounded {
-    border: 1px solid black;
+    border: 1px solid #555;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
 
 .button-right-rounded {
-    border: 1px solid black;
+    border: 1px solid #555;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
 
 .button-middle {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #333;
     border-left: none;
     border-right: none;
 }
+
+/* HEADER */
+
+/* HOME */
+
+.home-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #3b4754;
+}
+
+.home-desc {
+    font-size: 16px;
+    color: #798da3;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.banner-container {
+    overflow: hidden;
+    align-self: flex-start;
+    position: relative;
+}
+
+.banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+}
+.banner.active {
+    opacity: 1;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.review {
+    margin-left: 20px;
+}
+
+.review-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.review-comment {
+    text-align: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #798da3;
+    margin-top: 10px;
+}
+
+.profile-section {
+    margin-top: 40px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-size: 12px;
+    color: #3B4754;
+    margin: 0;
+}
+
+.profile-job {
+    font-size: 11px;
+    color: #9FAFC1;
+    margin: 5px 0;
+}
+
+.divider {
+    width: 30%;
+    border: none;
+    height: 2px;
+    background-color: #edf0f4;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.benefit-desc {
+    font-size: 13px;
+    font-weight: 600;
+    color: #3b4754;
+}
+
+.circle-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.circle-list li {
+    font-size: 12px;
+    color: #798da3;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 24px;
+}
+
+.circle-list li:before {
+    content: "";
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #edf0f4;
+    color: #9fafcb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-list li:nth-child(1):before {
+    content: "1";
+}
+
+.circle-list li:nth-child(2):before {
+    content: "2";
+}
+
+.circle-list li:nth-child(3):before {
+    content: "3";
+}
+
+/* HOME */
+
+/* CONTACT US */
+
+.contact-us-content {
+    width: 40%;
+    background-color: #edf0f4;
+    padding: 20px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.contact-us-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b4754;
+    margin-bottom: 16px;
+}
+
+.contact-us-desc {
+    font-size: 11px;
+    color: #798da3;
+    margin-bottom: 40px;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-title {
+    font-size: 11px;
+    color: #3b4754;
+    margin-bottom: 4px;
+}
+
+.input-field {
+    font-size: 13px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #c9d3dd;
+    border-radius: 4px;
+}
+
+.input-field option {
+    color: #3b4754;
+    background: white;
+}
+
+input::placeholder {
+    color: #9fafc1;
+}
+
+.send-button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #29323d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #444e57;
+}
+
+/* CONTACT US */
