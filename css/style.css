@@ -184,7 +184,7 @@ header {
     margin: 5px 0;
 }
 
-.divider30 {
+.divider-home {
     width: 30%;
     border: none;
     height: 2px;
@@ -193,11 +193,19 @@ header {
     margin-bottom: 32px;
 }
 
-.divider100 {
+.divider-call-action {
     border: none;
     height: 2px;
     background-color: #edf0f4;
     margin-bottom: 50px;
+}
+
+.divider-footer {
+    border: none;
+    height: 2px;
+    background-color: #edf0f4;
+    margin-top: 60px;
+    margin-bottom: 30px;
 }
 
 .benefit-desc {
@@ -389,3 +397,21 @@ input::placeholder {
     background-color: #444e57;
 }
 /* CALL ACTION */
+
+/* FOOTER */
+.footer-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-image {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: #798da3;
+    margin: 3px 0;
+}
+/* FOOTER */
