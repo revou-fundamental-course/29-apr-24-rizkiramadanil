@@ -409,3 +409,35 @@ input::placeholder {
     margin: 3px 0;
 }
 /* FOOTER */
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header-logo img {
+        height: 40px;
+    }
+
+    .header-nav-item button {
+        margin-top: 10px;
+    }
+
+    .home-title {
+        text-align: center;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .contact-us-content {
+        width: 100%;
+    }
+
+    .call-action-title{
+        text-align: center;
+    }
+}
+/* RESPONSIVE */
